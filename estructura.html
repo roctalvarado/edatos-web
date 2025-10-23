@@ -47,6 +47,16 @@
             box-shadow: 0 0 10px #0003;
         }
 
+        .img {
+            align-items: center;
+        }
+
+        .img img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
         input, select, button {
             font-size: 18px;
             padding: 5px 10px;
@@ -73,6 +83,10 @@
             background: #8e7efb;
         }
 
+        .title {
+            text-align: center;
+        }
+
         h1, h2, h3, h4, h5, p {
             margin: 10px 0;
         }
@@ -86,12 +100,12 @@
 <body>
     
     <section id="contenedor">
-        <div class="c6">
-            <h1>Convertidor de Monedas</h1>
+        <div class="c6 title">
+            <h1>Mi Página Web</h1>
         </div>
         <div class="c4" id="convertidor">
             <div>
-                <h2>Convertir</h2>
+                <h2>Convertir Moneda</h2>
                 <input type="number" placeholder="Ingrese el valor" id="value"> 
                 <div>
                     <select id="currency1">
@@ -107,23 +121,26 @@
                 <h3 id="resultado">...</h3>
         </div>
         <div>
-            <img src="https://factoro.mx/static/3b585df691a05757f0de76047adc2ab5/01408/Peso_dolar_6fa5f05274.jpg" alt="dolar y pesos">
+            <img src="resources/money.jpg" alt="dolar y pesos">
         </div>
         </div>
         <div class="c2">
-            <h2>Divisa</h2>
+            <h2>Talasofobia</h2>
             <p>
-                Una divisa es una moneda extranjera utilizada en el comercio o en las finanzas internacionales.
-                A diferencia de la moneda local de un país, la divisa se usa fuera de su territorio de origen para transacciones globales.
-                Para una persona en México, el dólar estadounidense o el euro son divisas, 
-                mientras que para una persona en Estados Unidos, el euro o el yen japonés lo son.
+                Es un miedo intenso e irracional hacia grandes masas de agua, como el mar u océanos, 
+                que se caracteriza por una ansiedad extrema ante situaciones como nadar, navegar o 
+                simplemente estar cerca de aguas profundas.
             </p>
         </div>
-        <div class="c2">
-            <img src="https://static.wikia.nocookie.net/silly-cat/images/d/d5/Bentley.png/revision/latest?cb=20231011193437" alt="gato1">
+        <div class="c2 img">
+            <img id="img-fox"src="resources/arctic_fox.jpg" alt="zorro ártico">
         </div>
-        <div class="c2"> Elemento 5 </div>
-        <div class="c2"> Elemento 6 </div>
+        <div class="c2 img">
+            <img id="img-cat"src="resources/Gakster.png" alt="gato">
+        </div>
+        <div class="c2 img">
+            <img id="img-ferret"src="resources/ferret.jpg" alt="hurón">
+        </div>
         <div class="c4"> Elemento 7 </div>
         <div class="c2"> Elemento 8 </div>
         <div class="c1"> Elemento 9 </div>
