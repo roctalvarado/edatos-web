@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+
+<style>
+
+    body, html{
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, #272043, #574c83);
+        box-sizing: border-box; /* Formatear padding */
+    }
+
+    section#contenido {
+        background: #1b1532;
+        margin: 15px auto;
+        padding: 20px;
+        padding-top: 5px;
+        border-radius: 5px;
+        border: double 10px #32285c;
+        color: #fff;
+        box-shadow: 10px 10px 0px #100d1e;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    section#contenido h2 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    section#contenido input, button {
+        width: 80%;
+        margin: 0px auto;
+        height: 25px;
+        border: 5px solid #32285c;
+        border-radius: 4px;
+        margin-top: 10px;
+        display: block;
+        
+    }
+
+    section#contenido button {
+        font-family: "Quicksand", sans-serif;
+        font-size: 30px;
+        height: 50px;
+        font-weight: 600;
+    }
+
+    section#contenido h3 {
+        text-align: center;
+    }
+
+</style>
+
+</head>
+<body>
+    <section id="contenido">
+        <h2>Identificador de Edades</h2>
+        <label style="
+            font-size: 18px;
+            font-weight: 800;
+            font-family: 'Quicksand', sans-serif;
+        ">Nombre</label>
+        <input id="nombre" type="text">
+        <br>
+        
+        <label style="
+            font-size: 18px;
+            font-weight: 800;
+            font-family: 'Quicksand', sans-serif;
+        ">Edad</label>
+        <input id="edad" type="number">
+        <br>
+        <button id="btnResultado" onclick="esAdulto()">Resultado</button>
+        <br>
+        <h3 id="resultado" style="
+            font-size: 20px;
+            color: #fff700;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            text-transform: uppercase;
+        ">...</h3>
+    </section>
+
+    <script>
+        function esAdulto(){
+            let nombre = document.querySelector("#nombre").value;
+            let edad = Number(document.querySelector("#edad").value);
+            let resultado = document.querySelector("#resultado");
+
+            if (edad >= 18) {
+                resultado.innerHTML = `Hola ${nombre}, eres mayor de edad`;
+            }
+            else {
+                resultado.innerHTML = "Hola " + nombre + ", eres menor de edad";
+            }
+        }
+    </script>
+</body>
+</html>

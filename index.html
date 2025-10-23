@@ -1,0 +1,49 @@
+<!--
+HTML: Estructura de sitio web
+Contenido: Botones, formularios, imágenes, títulos,
+párrafos, enlaces, listas, tablas, secciones, etc.
+
+CSS: Diseño del sitio web
+Apariencia: tamaño (ancho y alto), colores,
+efectos, tamaños de letra, tipos de letra, redondeado, sombras,
+brillos, fondos (sólidos, degradados o imagen), etc.
+
+JS: Funcionalidad del sitio web
+Hacer click a un botón, enviar un formulario,
+pasar el cursor por un elemento, al cargar la página,
+al iniciar sesión, etc.
+-->
+
+<!DOCTYPE html> <!-- Indica que estamos usando HTML5 -->
+<html lang="en"> <!-- El inicio de la página -->
+<head> <!-- Configuración de la página (importación de archivos de js, css, metadatos) -->
+    <meta charset="UTF-8"> <!-- Indica que podemos usar acentos, ñ y otros caracteres -->
+    <!-- Indica que el sitio web se tiene que adaptar al dispositivo móvil -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Datos</title> <!-- Es el título que aparece en la pestaña del navegador y en los buscadores como Google -->
+</head>
+<body> <!-- Aquí va la estructura de la página -->
+    <h1>Título principal</h1>
+    <h2>Título secundario</h2>
+
+    <input id="nombre" type="text" placeholder="Aquí va el Nombre" />
+
+    <button onclick="saludar()">Saludar</button>
+
+    <h3 id="mensaje"></h3>
+
+    <script>
+        function saludar(){
+            /*
+            # - ID
+            . - class
+            */
+            let nombre = document.querySelector("#nombre");
+
+            document.querySelector("#mensaje").innerHTML = "HOLA " + nombre.value;
+
+            // alert("HOLA " + nombre.value);
+        }
+    </script>
+</body>
+</html> <!-- El fin de la página -->

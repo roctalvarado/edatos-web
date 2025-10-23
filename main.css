@@ -1,0 +1,74 @@
+body, html {
+    background: #272043;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor {
+    background: #1b1532; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    width: 250px; /* Ancho en pixeles */
+    width: 40%; /* Ancho en porcentaje */
+    height: 300px; /* Alto */
+    margin: 25px; /* Distancia de otros elementos / Externo */
+    padding: 15px /* Distancia del contenido / Interno */;
+    padding-top: 15px;
+    font-family: Helvetica; /* Tipo de letra */
+    border-radius: 10px;
+    border-radius: 5px 20px 20px 20px;
+    /* iz-a de-a de-ab iz-ab */
+
+    /* iz-de arriba-abajo difuminado color */
+    box-shadow: 10px 10px 20px #100d1e;
+}
+
+#contenedor h1 {
+    font-size: 30px;
+    text-align: center;
+    background: #32285c;
+    border-radius: 15px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+}
+
+#contenedor input, #contenedor select, #contenedor button{
+    width: 70%;
+    margin: 5px 0px;
+    height: 25px;
+    border: 0px solid;
+    background: #584e7d;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+}
+
+#contenedor select, #contenedor button{
+    width: 50%;
+    font-weight: 600;
+    background: #584e7d;
+    cursor: pointer;
+    text-align: center;
+}
+
+#contenedor button{
+    width: 50%;
+    font-weight: 600;
+    background: #100d1e;
+    
+}
+
+#contenedor button:hover{
+    background: #282142;
+    cursor: pointer;
+}
+
+#resultado{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 15px;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* comentario */

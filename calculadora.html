@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"> <!-- Importación del archivo css -->
+</head>
+<body>
+    <section id="contenedor">
+        <h1>Calculadora</h1>
+        <input id="numero1" type="text">
+        <input id="numero2" type="text">
+        <br>
+        <select id="operacion">
+            <option value="s">Sumar</option>
+            <option value="r">Restar</option>
+            <option value="m">Multiplicar</option>
+            <option value="d">Dividir</option>
+        </select>
+        <button id="btnCalcular" onclick="calcular()">Calcular</button>
+        <br>
+        <h2 id="resultado">0.0</h2>
+    </section>
+    <script>
+        function calcular(){
+            let numero1 = Number(document.querySelector("#numero1").value);
+            let numero2 = Number(document.querySelector("#numero2").value);
+            let resultado = document.querySelector("#resultado");
+            let operacion = document.querySelector("#operacion").value;
+
+            switch(operacion) {
+                case "s": resultado.innerHTML = numero1 + numero2; break;
+                case "r": resultado.innerHTML = numero1 - numero2; break;
+                case "m": resultado.innerHTML = numero1 * numero2; break;
+                case "d": resultado.innerHTML = numero1 / numero2; break;
+            }
+        }
+    </script>
+</body>
+</html>
