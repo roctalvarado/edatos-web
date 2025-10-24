@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         body, html {
-            background: #272043;
+            background: #212043;
+            background: #cce5fd;
         }
         
         #contenedor {
@@ -14,7 +18,7 @@
             grid-template-columns: 50% 150px auto;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             /* grid-template-columns: 50% 20% 20% 20% 20%;  */
-            width: 1200px;
+            width: 60%;
             margin: 0 auto;
         }
 
@@ -27,12 +31,15 @@
 
         /* > Hijo directo */
         #contenedor > div {
-            background: #1b1532;
-            color: #fff;
+            /* background: #27264d; */
+            background: #FFF;
+            color: #5D5C61;
             font-size: 25px;
             margin: 5px;
             padding: 20px;
-            box-shadow: 5px 5px 0px #100d1e;
+            box-shadow: 5px 5px 0px #E2E8F0;
+            box-sizing: border-box;
+            font-family: "TikTok Sans", sans-serif;
         }
 
         #convertidor {
@@ -44,7 +51,6 @@
         #convertidor img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 0 10px #0003;
         }
 
         .img {
@@ -55,6 +61,24 @@
             max-width: 100%;
             height: auto;
             display: block;
+            border-radius: 5px;
+        }
+
+        .video {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            padding: 20px;
+
+        }
+
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+
         }
 
         input, select, button {
@@ -67,32 +91,78 @@
 
         select {
             width: 40%;
+            background: #CBD5E1;
+        }
+
+        select:hover {
+            cursor: pointer;
         }
 
         input {
             width: 70%;
+            background: #CBD5E1;
+        }
+
+        input:hover{
+            cursor: text;
         }
 
         button {
-            background: #6c5ce7;
+            background: #3B82F6;
             color: white;
             cursor: pointer;
         }
 
+        button:active {
+            transform: scale(0.95);
+        }
+
         button:hover {
-            background: #8e7efb;
+            background: #669ef7;
+        }
+
+        #subscribe {
+            text-transform: uppercase;
+            width: 100%;
+            font-weight: 600;
+            font-size: 40px;
+            margin: 50px 0;
         }
 
         .title {
             text-align: center;
         }
 
-        h1, h2, h3, h4, h5, p {
-            margin: 10px 0;
+        h1, h2, h3, h4, h5 {
+            margin: 0;
+            color: #22315c;
+        }
+
+        h1 {
+            font-size: 100px;
         }
 
         p {
             font-size: 20px;
+            color: #334155;
+            margin: 0;
+        }
+
+        #p-subscribe {
+            text-align: center;
+            margin: 50px 0px;
+            align-items: center;
+            font-size: 20px;
+            overflow: hidden;
+        }
+
+        #txt-gato {
+            text-align: justify;
+        }
+
+        .subscribe-container {
+            align-items: center;
+            justify-content: 100%;
         }
         
     </style>
@@ -111,7 +181,7 @@
                     <select id="currency1">
                         <option value="mxn">Pesos</option>
                         <option value="usd">Dólares</option>
-                    </select> a
+                    </select>
                     <select id="currency2">
                         <option value="usd">Dólares</option>
                         <option value="mxn">Pesos</option>
@@ -125,11 +195,11 @@
         </div>
         </div>
         <div class="c2">
-            <h2>Talasofobia</h2>
-            <p>
-                Es un miedo intenso e irracional hacia grandes masas de agua, como el mar u océanos, 
-                que se caracteriza por una ansiedad extrema ante situaciones como nadar, navegar o 
-                simplemente estar cerca de aguas profundas.
+            <h2>Gato</h2>
+            <p id="txt-gato">
+                Es un mamífero carnívoro de la familia Felidae, 
+                conocido por ser un depredador con agilidad, vista, 
+                oído y olfato muy desarrollados.
             </p>
         </div>
         <div class="c2 img">
@@ -141,10 +211,27 @@
         <div class="c2 img">
             <img id="img-ferret"src="resources/ferret.jpg" alt="hurón">
         </div>
-        <div class="c4"> Elemento 7 </div>
-        <div class="c2"> Elemento 8 </div>
-        <div class="c1"> Elemento 9 </div>
-        <div class="c5"> Elemento 9 </div>
+        <div class="c4 video">
+            <iframe
+                width="560" 
+                height="315"
+                src="https://www.youtube.com/embed/kEkSwIN6Yns" 
+                title="Video de YouTube" 
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="c2 subscribe-container">
+            <button id="subscribe" onclick="suscribirse()">Suscríbete</button>
+            <p id="p-subscribe"></p>
+        </div>
+        <div class="c1 img">
+            <img id="img-cat"src="resources/kitty.png" alt="gato2">
+        </div>
+        <div class="c5">
+            <h3>Diseñado por:</h3>
+            <p>Raúl Octavio Alvarado Castro</p>
+        </div>
     </section>
 
     <script>
@@ -181,6 +268,19 @@
             }
             
             
+        }
+        var counter = 0
+        function suscribirse(){
+            let parrafo = document.querySelector("#p-subscribe");
+            counter++;
+            if (counter == 1) {
+                parrafo.textContent = `Te has suscrito`
+            } else {
+                parrafo.textContent = `Te has suscrito x${counter}`;
+            }         
+            parrafo.style.transition = "transform 0.2s ease";
+            parrafo.style.transform = "scale(1.2)";
+            setTimeout(() => parrafo.style.transform = "scale(1)", 200);
         }
 
     </script>
